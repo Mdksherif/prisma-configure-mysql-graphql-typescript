@@ -1,0 +1,56 @@
+Prisma Configuration
+
+Project structure 
+
+my-apollo-server-app/
+├── node_modules/      
+├── prisma/
+│   ├── schema.prisma
+│   └── migrations/
+├── src/
+│   ├── context.ts - to setup prisma context.
+│   ├── index.ts
+│   ├── resolvers/
+│   │   ├── Mutation.ts
+│   │   └── Query.ts
+│   ├── schema.ts
+│   └── types/
+│       └── Employee.ts
+├── .env
+├── package.json
+├── tsconfig.json
+└── README.md
+
+
+create a node project 
+
+install dependencies > npm install typescript ts-node @types/node --save-dev
+npm install @apollo/server graphql reflect-metadata @prisma/client prisma
+npm install dotenv
+
+create an typescript configuration for tsconfig.json.
+
+npm install -g typescript
+tsc --init
+
+initialize prisma by following command 
+npx prisma init
+
+configure the schema like provider, url, and columns
+
+setup dotenv 
+# DATABASE_URL="mysql://username:password@localhost:3306/mydatabase"
+
+
+run prisma migration cmds
+npx prisma migrate dev --name init
+npx prisma generate
+
+setup appollo server 
+strat the development server what in package.json.
+
+
+
+
+
+
